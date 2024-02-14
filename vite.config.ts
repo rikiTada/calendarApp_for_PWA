@@ -8,7 +8,10 @@ export default defineConfig({
     preact(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.ico", "apple-touch-icon.png"],
+      devOptions: {
+        enabled: true,
+      },
+      includeAssets: ["favicon.ico"],
       manifest: {
         name: "PWA Sample Apps",
         short_name: "PWAApps",
@@ -16,23 +19,23 @@ export default defineConfig({
         theme_color: "#ffffff",
         icons: [
           {
-            src: "pwa-192x192.png",
+            src: "icon-192x192.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "pwa-512x512.png",
+            src: "icon-512x512.png",
             sizes: "512x512",
             type: "image/png",
           },
           {
-            src: "pwa-512x512.png",
+            src: "icon-512x512.png",
             sizes: "512x512",
             type: "image/png",
             purpose: "any",
           },
           {
-            src: "pwa-512x512.png",
+            src: "icon-512x512.png",
             sizes: "512x512",
             type: "image/png",
             purpose: "maskable",
